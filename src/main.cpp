@@ -62,9 +62,9 @@ EXTERN_C [[maybe_unused]] __declspec(dllexport) bool SKSEAPI SKSEPlugin_Load(con
                 mod_manager->set_armor_rating_rescaled_remake(
                     LoadLibraryW(L"Data/SKSE/Plugins/ArmorRatingRescaledRemake.dll"));
                 mod_manager->set_hand_to_hand(LoadLibraryW(L"Data/SKSE/Plugins/HandToHand.dll"));
-
                 auto* data_handler = RE::TESDataHandler::GetSingleton();
                 mod_manager->set_skyrim_unbound((data_handler && data_handler->LookupModByName("Skyrim Unbound.esp")));
+                mod_manager->set_blade_and_blunt((data_handler && data_handler->LookupModByName("BladeAndBlunt.esp")));
 
                 logger::info("Done with Data loaded"sv);
                 break;

@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 namespace mod {
     class mod_manager {
@@ -14,9 +14,13 @@ namespace mod {
         void set_skyrim_unbound(bool a_value);
         [[nodiscard]] bool get_skyrim_unbound() const;
 
+        void set_blade_and_blunt(bool a_value);
+        [[nodiscard]] bool get_blade_and_blunt() const;
+
     private:
         bool armor_rating_rescaled_remake{};
         bool hand_to_hand{};
         bool skyrim_unbound{};
+        bool blade_and_blunt{};
     };
 }
